@@ -1,0 +1,89 @@
+# Name of the Distro to build (full name, without special charcters)
+  DISTRONAME="FreeLB"
+
+# Welcome Message for e.g. SSH Server (up to 5 Lines)
+  GREETING0="#####################################"
+  GREETING1="# FreeLB - OpenSource LoadBallancer #"
+  GREETING2="# ..... visit http://www.freelb.org #"
+  GREETING3="#####################################"
+  GREETING4=""
+
+# Hostname for target system (freelb)
+  HOSTNAME="freelb"
+
+# Root password to integrate in the target system
+  ROOT_PASSWORD="freelb"
+
+# User to integrate in the target system
+  USER_NAME="freelb"
+
+# User group to integrate in the target system
+  USER_GROUP="freelb"
+
+# User password to integrate in the target system
+  USER_PASSWORD="freelb"
+
+# The TARGET_CPU variable controls which processor should be targeted for
+# generated code.
+  case $TARGET_ARCH in
+    i386)
+      # (AMD CPUs)    k8 k8-sse3 opteron opteron-sse3 athlon64 athlon64-sse3
+      #               athlon-fx athlon-mp athlon-xp athlon-4
+      #               athlon-tbird athlon k6-3 k6-2 k6 geode
+      # (Intel CPUs)  atom core2 nocona prescott pentium4[m] pentium3[m]
+      #               pentium-m pentium2 pentiumpro pentium-mmx pentium
+      #               i686 i586 i486 i386
+      # (VIA CPUs)    c3 c3-2
+      #
+      TARGET_CPU="i686"
+      ;;
+
+    x86_64)
+      # (AMD CPUs)    k8 k8-sse3 opteron opteron-sse3 athlon64 athlon64-sse3
+      #               athlon-fx amdfam10 barcelona
+      # (Intel CPUs)  atom core2 nocona
+      #
+      TARGET_CPU="core2"
+      ;;
+  esac
+
+# Build optimizations (size/speed)
+  OPTIMIZATIONS="size"
+
+# Project CFLAGS
+  PROJECT_CFLAGS="-mmmx -msse -msse2 -mfpmath=sse"
+
+# LTO (Link Time Optimization) support
+  LTO_SUPPORT="yes"
+
+# Bootloader to use (syslinux / u-boot / atv-bootloader)
+  BOOTLOADER="syslinux"
+
+# Configuration for u-boot
+  UBOOT_CONFIG=""
+
+# Kernel to use. values can be:
+# default:  default mainline kernel
+# ti-omap4: Ti's OMAP4 kernel
+  LINUX="default"
+
+# use linux-next (latest rc) instead latest released version
+  LINUX_NEXT="no"
+
+# SquashFS compression method (gzip / lzo / xz)
+  SQUASHFS_COMPRESSION="gzip"
+
+# build with network support (yes / no)
+  NETWORK="yes"
+
+# build and install SSH Guard (yes / no)
+  SSHGUARD_SUPPORT="no"
+
+# Distribution Specific source location
+  DISTRO_MIRROR="http://sources.openelec.tv/mirror"
+  DISTRO_SRC="http://sources.openelec.tv/$FREELB_VERSION"
+
+# installer
+  INSTALLER_SUPPORT="yes"
+
+  SENSOR_SUPPORT="yes"
