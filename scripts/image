@@ -203,7 +203,6 @@ IMAGE_NAME="$DISTRONAME-$TARGET_VERSION"
             . $BOOTLOADER_DIR/release
           fi
         fi
-        cp -R $CONFIG/release/openelec.ico $RELEASE_DIR
         echo "$TARGET_VERSION" > $RELEASE_DIR/RELEASE
 
 
