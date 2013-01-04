@@ -23,7 +23,7 @@
 #
 # mounting needed filesystems
 #
-# runlevels: openelec, installer, textmode
+# runlevels: operations, installer, textmode
 
 progress "mounting needed filesystems"
   mkdir -p /dev/pts

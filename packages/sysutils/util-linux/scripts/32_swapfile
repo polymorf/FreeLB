@@ -23,7 +23,7 @@
 #
 # create and enable swapfile
 #
-# runlevels: openelec, textmode
+# runlevels: operations, textmode
 
 . /etc/swap.conf
 

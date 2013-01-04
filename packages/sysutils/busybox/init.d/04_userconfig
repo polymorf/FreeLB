@@ -23,7 +23,7 @@
 #
 # copy userconfig and samples
 #
-# runlevels: openelec, textmode
+# runlevels: operations, textmode
 
 if [ -d /usr/config ]; then
   progress "copy userconfig and samples"

@@ -22,7 +22,7 @@
 #
 # starting Udev daemon
 #
-# runlevels: openelec, installer, textmode
+# runlevels: operations, installer, textmode
 
 progress "starting udev daemon"
   echo -e '\000\000\000\000' > /proc/sys/kernel/hotplug

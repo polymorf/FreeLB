@@ -22,7 +22,7 @@
 #
 # load modules
 #
-# runlevels: openelec, textmode
+# runlevels: operations, textmode
 
 (
   progress "loading kernel modules"

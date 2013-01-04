@@ -23,7 +23,7 @@
 #
 # start syslog daemon
 #
-# runlevels: openelec, installer, textmode
+# runlevels: operations, installer, textmode
 
 (
   progress "Starting Syslog daemon"

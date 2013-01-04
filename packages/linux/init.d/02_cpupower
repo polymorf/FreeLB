@@ -22,7 +22,7 @@
 #
 # set cpupower to 'performance'
 #
-# runlevels: openelec, textmode
+# runlevels: operations, textmode
 
 progress "set cpu's to full power"
 

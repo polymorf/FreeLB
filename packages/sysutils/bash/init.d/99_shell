@@ -21,7 +21,7 @@
 ################################################################################
 # start text mode shell
 #
-# runlevels: openelec, installer, textmode
+# runlevels: operations, installer, textmode
 
 cd /storage
 TTY="1"

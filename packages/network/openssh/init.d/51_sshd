@@ -21,7 +21,7 @@
 
 # start ssh server
 #
-# runlevels: openelec, textmode
+# runlevels: operations, textmode
 
   if [ -f /var/config/settings.conf ]; then
     . /var/config/settings.conf

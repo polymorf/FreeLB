@@ -23,6 +23,6 @@
 #
 # copy system config
 #
-# runlevels: openelec, textmode
+# runlevels: operations, textmode
 
 # TODO

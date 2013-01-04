@@ -22,7 +22,7 @@
 #
 # monitoring udev events
 #
-# runlevels: openelec, installer, textmode
+# runlevels: operations, installer, textmode
 
 (
   progress "monitoring udev events"

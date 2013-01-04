@@ -23,7 +23,7 @@
 #
 # setup hdd standby
 #
-# runlevels: openelec, installer, textmode
+# runlevels: operations, installer, textmode
 
 if [ -f /var/config/settings.conf ]; then
   . /var/config/settings.conf

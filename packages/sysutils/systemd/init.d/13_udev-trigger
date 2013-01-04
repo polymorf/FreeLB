@@ -22,7 +22,7 @@
 #
 # request events from the kernel
 #
-# runlevels: openelec, installer, textmode
+# runlevels: operations, installer, textmode
 
   progress "request udev events from the kernel (type: subsystems)"
     udevadm trigger --type=subsystems --action=add

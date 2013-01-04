@@ -23,7 +23,7 @@
 #
 # make variable directory structure
 #
-# runlevels: openelec, installer, textmode
+# runlevels: operations, installer, textmode
 
 progress "setting timezone"
   TIMEZONE="Europe/Paris"
