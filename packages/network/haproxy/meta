@@ -1,10 +1,6 @@
-#!/bin/sh
-
 ################################################################################
 #      This file is part of FreeLB - http://www.freelb.org
-#      This file was taken from OpenELEC (http://www.openelec.tv)
 #      Copyright (C) 2012-2013 David BERARD (david@freelb.org)
-#      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -22,13 +18,19 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-. config/options $1
+PKG_NAME="haproxy"
+PKG_VERSION="1.5-dev17"
+PKG_REV="1"
+PKG_ARCH="any"
+PKG_LICENSE="OSS"
+PKG_SITE="http://haproxy.1wt.eu/"
+PKG_URL="http://haproxy.1wt.eu/download/1.5/src/devel/$PKG_NAME-$PKG_VERSION.tar.gz"
+PKG_DEPENDS="zlib openssl pcre"
+PKG_BUILD_DEPENDS="toolchain zlib openssl"
+PKG_PRIORITY="optional"
+PKG_SECTION="network"
+PKG_SHORTDESC="haproxy: The Reliable, High Performance TCP/HTTP Load Balancer"
+PKG_LONGDESC="HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications. It is particularly suited for web sites crawling under very high loads while needing persistence or Layer7 processing."
 
-$SCRIPTS/install iana-etc
-$SCRIPTS/install ethtool
-$SCRIPTS/install openssh
-$SCRIPTS/install haproxy
+PKG_AUTORECONF="no"
 
-if [ "$DEVTOOLS" = "yes" ]; then
-  $SCRIPTS/install iproute2
-fi
