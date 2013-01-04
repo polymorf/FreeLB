@@ -64,5 +64,3 @@ progress "make variable library directory structure"
   mkdir -p /var/lib/polkit-1/localauthority/50-local.d
   mkdir -p /var/lib/polkit-1/localauthority/90-mandatory.d
 
-  mkdir -p /var/lib/udisks
-

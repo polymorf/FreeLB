@@ -56,11 +56,8 @@
 # LTO (Link Time Optimization) support
   LTO_SUPPORT="yes"
 
-# Bootloader to use (syslinux / u-boot / atv-bootloader)
+# Bootloader to use (syslinux)
   BOOTLOADER="syslinux"
-
-# Configuration for u-boot
-  UBOOT_CONFIG=""
 
 # Kernel to use. values can be:
 # default:  default mainline kernel
@@ -76,8 +73,8 @@
 # build with network support (yes / no)
   NETWORK="yes"
 
-# build and install SSH Guard (yes / no)
-  SSHGUARD_SUPPORT="no"
+# build and install SFTP
+  SFTP_SERVER="yes"
 
 # Distribution Specific source location
   DISTRO_MIRROR="http://sources.openelec.tv/mirror"
@@ -87,3 +84,5 @@
   INSTALLER_SUPPORT="yes"
 
   SENSOR_SUPPORT="yes"
+  #SWAP_SUPPORT="yes"
+  #SWAPFILESIZE="512M"

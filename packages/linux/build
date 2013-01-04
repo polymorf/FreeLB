@@ -24,12 +24,7 @@
 
 . config/options $1
 
-if [ "$BOOTLOADER" = "u-boot" ]; then
-  $SCRIPTS/build u-boot
-  KERNEL_IMAGE="uImage"
-else
-  KERNEL_IMAGE="bzImage"
-fi
+KERNEL_IMAGE="bzImage"
 
 # dont build parallel
   MAKEFLAGS=-j1

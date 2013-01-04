@@ -24,7 +24,6 @@
 
 . config/options $1
 
-$SCRIPTS/install connman
 $SCRIPTS/install iana-etc
 $SCRIPTS/install ethtool
 $SCRIPTS/install openssh
