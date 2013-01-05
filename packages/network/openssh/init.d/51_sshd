@@ -23,10 +23,6 @@
 #
 # runlevels: operations, textmode
 
-  if [ -f /var/config/settings.conf ]; then
-    . /var/config/settings.conf
-  fi
-
   RSA1_KEY="/storage/.cache/ssh/ssh_host_key"
   RSA2_KEY="/storage/.cache/ssh/ssh_host_rsa_key"
   DSA2_KEY="/storage/.cache/ssh/ssh_host_dsa_key"

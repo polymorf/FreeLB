@@ -77,12 +77,13 @@
   SFTP_SERVER="yes"
 
 # Distribution Specific source location
-  DISTRO_MIRROR="http://sources.openelec.tv/mirror"
-  DISTRO_SRC="http://sources.openelec.tv/$FREELB_VERSION"
+  DISTRO_MIRROR="http://sources.freelb.org/mirror"
+  DISTRO_SRC="http://sources.freelb.org/$FREELB_VERSION"
 
 # installer
   INSTALLER_SUPPORT="yes"
 
   SENSOR_SUPPORT="yes"
+  #UDEV_SUPPORT="yes"
   #SWAP_SUPPORT="yes"
   #SWAPFILESIZE="512M"

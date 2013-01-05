@@ -57,6 +57,9 @@ USER_PWD="`$ROOT/$TOOLCHAIN/bin/cryptpw -m sha512 $USER_PASSWORD`"
   # /etc/hosts must be writeable
     ln -sf /var/cache/hosts $INSTALL/etc/hosts
 
+  # /etc/resolv.conf must be writeable
+    ln -sf /var/cache/resolv.conf $INSTALL/etc/resolv.conf
+
   # /etc/mtab is needed by udisks etc...
     ln -sf /proc/self/mounts $INSTALL/etc/mtab
 

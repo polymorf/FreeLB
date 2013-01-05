@@ -1,6 +1,6 @@
 ################################################################################
+#      This file is part of FreeLB - http://www.freelb.org
 #      Copyright (C) 2012-2013 David BERARD (david@freelb.org)
-#      http://www.freelb.org
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -18,17 +18,18 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-# start haproxy
-#
-# runlevels: operations, textmode
+PKG_NAME="netconfig"
+PKG_VERSION="1"
+PKG_REV="1"
+PKG_ARCH="any"
+PKG_LICENSE="GPL"
+PKG_SITE=""
+PKG_URL=""
+PKG_DEPENDS="ntp"
+PKG_BUILD_DEPENDS=""
+PKG_PRIORITY="optional"
+PKG_SECTION="network"
+PKG_SHORTDESC="netconfig: network startup script"
+PKG_LONGDESC=""
 
-  HAPROXY="/usr/bin/haproxy"
-  HOME="/storage"
-
-  (
-      progress "starting HAProxy"
-      OPTIONS="-f /storage/.config/haproxy.cfg"
-      mkdir -p /var/empty
-      chmod -R 600 /var/empty
-      eval $HAPROXY $OPTIONS
-  )&
+PKG_AUTORECONF="no"

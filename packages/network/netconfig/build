@@ -1,6 +1,8 @@
+#!/bin/sh
+
 ################################################################################
+#      This file is part of FreeLB - http://www.freelb.org
 #      Copyright (C) 2012-2013 David BERARD (david@freelb.org)
-#      http://www.freelb.org
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -18,17 +20,6 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-# start haproxy
-#
-# runlevels: operations, textmode
+. config/options $1
 
-  HAPROXY="/usr/bin/haproxy"
-  HOME="/storage"
-
-  (
-      progress "starting HAProxy"
-      OPTIONS="-f /storage/.config/haproxy.cfg"
-      mkdir -p /var/empty
-      chmod -R 600 /var/empty
-      eval $HAPROXY $OPTIONS
-  )&
+exit 0

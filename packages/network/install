@@ -25,6 +25,7 @@
 . config/options $1
 
 $SCRIPTS/install iana-etc
+$SCRIPTS/install netconfig
 $SCRIPTS/install ethtool
 $SCRIPTS/install openssh
 $SCRIPTS/install haproxy

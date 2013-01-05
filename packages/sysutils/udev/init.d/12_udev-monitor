@@ -1,5 +1,6 @@
 ################################################################################
 #      Copyright (C) 2012-2013 David BERARD (david@freelb.org)
+#      Copyright (C) 2009-2010 OpenELEC.tv
 #      http://www.freelb.org
 #
 #  This Program is free software; you can redistribute it and/or modify
@@ -18,17 +19,12 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-# start haproxy
 #
-# runlevels: operations, textmode
+# monitoring udev events
+#
+# runlevels: operations, installer, textmode
 
-  HAPROXY="/usr/bin/haproxy"
-  HOME="/storage"
-
-  (
-      progress "starting HAProxy"
-      OPTIONS="-f /storage/.config/haproxy.cfg"
-      mkdir -p /var/empty
-      chmod -R 600 /var/empty
-      eval $HAPROXY $OPTIONS
-  )&
+(
+  progress "monitoring udev events"
+    udevadm monitor -e > /dev/udev.log
+)&
