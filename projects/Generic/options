@@ -56,7 +56,7 @@
 # LTO (Link Time Optimization) support
   LTO_SUPPORT="yes"
 
-# Bootloader to use (syslinux)
+# Bootloader to use (syslinux / bcm2835-bootloader)
   BOOTLOADER="syslinux"
 
 # Kernel to use. values can be:
