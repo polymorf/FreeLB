@@ -1,0 +1,24 @@
+--- ./Makefile.old	2013-01-10 00:59:01.064555218 +0100
++++ ./Makefile	2013-01-10 00:59:25.034590375 +0100
+@@ -521,8 +521,8 @@
+ PCREDIR	        := $(shell pcre-config --prefix 2>/dev/null || echo /usr/local)
+ endif
+ ifeq ($(USE_STATIC_PCRE),)
+-OPTIONS_CFLAGS  += -DUSE_PCRE $(if $(PCREDIR),-I$(PCREDIR)/include)
+-OPTIONS_LDFLAGS += $(if $(PCREDIR),-L$(PCREDIR)/lib) -lpcreposix -lpcre
++OPTIONS_CFLAGS  += -DUSE_PCRE
++OPTIONS_LDFLAGS += -lpcreposix -lpcre
+ endif
+ BUILD_OPTIONS   += $(call ignore_implicit,USE_PCRE)
+ endif
+@@ -533,8 +533,8 @@
+ ifeq ($(PCREDIR),)
+ PCREDIR         := $(shell pcre-config --prefix 2>/dev/null || echo /usr/local)
+ endif
+-OPTIONS_CFLAGS  += -DUSE_PCRE $(if $(PCREDIR),-I$(PCREDIR)/include)
+-OPTIONS_LDFLAGS += $(if $(PCREDIR),-L$(PCREDIR)/lib) -Wl,-Bstatic -lpcreposix -lpcre -Wl,-Bdynamic
++OPTIONS_CFLAGS  += -DUSE_PCRE
++OPTIONS_LDFLAGS += -Wl,-Bstatic -lpcreposix -lpcre -Wl,-Bdynamic
+ BUILD_OPTIONS   += $(call ignore_implicit,USE_STATIC_PCRE)
+ endif
+ 
